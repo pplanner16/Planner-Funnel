@@ -21,13 +21,6 @@
 - wrapper for database
 - unit tests
 ### processing
-#### SQL SELECT
-- print html_page_top table
-- execute query on DB
-- if query has output, print
-- else print return code
-- print html_page_bottom table
-### SQL INSERT, UPDATE, DELETE
 - print html_page_top table
 - execute statemnt on DB
 - if error print
