@@ -4,7 +4,7 @@
 - client server
 - most processing logic and data stored in database
 ## Flow
-- client posts SQL statement
+- front end posts SQL statement
 - HTTP server calls CGI program
 - CGI program executes SQL statement on database
 - CGI program queries the result on database
@@ -20,20 +20,30 @@
 ## CGI program
 - wrapper for database
 - unit tests
-### processing
-- print html_page_top table
-- execute statemnt on DB
-- if error print
-- query default_query
-- execute default_query.query statement
-- if error print
-- print html_page_bottom table
-
+### writeprocess(sql statement from front end)
+    printf(process(sql statement from front end))
+### process(sql statement from front end, htmloutput)
+    append htmlpagetop table to htmloutput
+    execute ssffe on DB
+    if error
+	append error to htmloutput
+    else
+	while no rows are returned
+	    build new SQL statement based on last executed statement
+	    execute new SQL statement
+        append rows to htmloutput
+    append htmlpagebottom table to htmloutput
+### buildnewsql(last sql statement)
+    extract table name and main statement
+    query defaultqueries
 ### tables
-#### test_cases
+#### testcases
 - SQL statement - client request
 - SQL statement - Expected result
-#### default_qeueries
+#### defaultqeueries
 - statement name (insert, update, delete)
 - table name
 - query statement
+#### htmlpage
+- top
+- bottom
