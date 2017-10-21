@@ -35,7 +35,11 @@
     append htmlpagebottom table to htmloutput
 ### buildnewsql(last sql statement)
     extract table name and main statement
-    query defaultqueries
+    query defaultqueries  
+### runtests
+    query testcase
+    while still more rows
+        check (process(testcases.client request) = testcases.Expected result)
 ### tables
 #### testcases
 - SQL statement - client request
