@@ -8,7 +8,7 @@
 - HTTP server calls CGI program
 - CGI program executes SQL statement on database
 - CGI program queries the result on database
-- CGI program outputs query result
+- CGI program outputs html including query result
 - HTTP server returns output to client
 ## Front end
 - web browser
@@ -19,7 +19,7 @@
 - CGI program
 ## CGI program
 - wrapper for database
-- build new statement is no result row returned from last statement
+- build new statement if no result row returned from last statement
 - unit tests
 ### writeprocess(sql statement from front end)
     printf(process(sql statement from front end))
@@ -49,6 +49,11 @@
 - statement name (insert, update, delete)
 - table name
 - query statement
+##### default entries
+- insert_table_name, '', sql to extract table from insert statement 
+- update_table_name, '', sql to extract table from update statement 
+- delete_table_name, '', sql to extract table from delete statement 
+- '', '', 'select * from table_name limit 10'
 #### htmlpage
 - top
 - bottom
