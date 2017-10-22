@@ -19,6 +19,7 @@
 - CGI program
 ## CGI program
 - wrapper for database
+- build new statement is no result row returned from last statement
 - unit tests
 ### writeprocess(sql statement from front end)
     printf(process(sql statement from front end))
